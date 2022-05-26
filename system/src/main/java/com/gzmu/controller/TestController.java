@@ -1,12 +1,11 @@
 package com.gzmu.controller;
 
-import com.gzmu.servive.TestService;
+
+import com.gzmu.server.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/system")
@@ -28,8 +27,4 @@ public class TestController {
         return testService.getUser();
     }
 
-    @RequestMapping("/getname")
-    public String getName(){
-        return null;
-    }
 }

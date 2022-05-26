@@ -1,11 +1,9 @@
-package com.gzmu.servive.impl;
+package com.gzmu.server.service.impl;
 
-import com.gzmu.mapper.TestMapper;
-import com.gzmu.servive.TestService;
+import com.gzmu.server.mapper.TestMapper;
+import com.gzmu.server.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class TestServiceImpl implements TestService {

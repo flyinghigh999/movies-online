@@ -1,8 +1,6 @@
-package com.gzmu.mapper;
+package com.gzmu.server.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
-import java.util.List;
 
 @Repository
 public interface TestMapper {

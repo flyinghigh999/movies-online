@@ -1,4 +1,4 @@
-package com.gzmu.entity;
+package com.gzmu.server.entity;
 
 public class TestEntity {
 

@@ -1,6 +1,4 @@
-package com.gzmu.servive;
-
-import java.util.List;
+package com.gzmu.server.service;
 
 public interface TestService {
     public String getUser();

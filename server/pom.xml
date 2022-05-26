@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>system</artifactId>
-
+    <artifactId>server</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -33,16 +32,11 @@
             <version>5.1.41</version>
         </dependency>
 
-<!--        热部署-->
+        <!--        热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>com.gzmu</groupId>
-            <artifactId>server</artifactId>
         </dependency>
     </dependencies>
 
@@ -78,4 +72,6 @@
             </plugin>
         </plugins>
     </build>
+
+
 </project>
