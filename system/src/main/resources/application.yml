@@ -27,4 +27,4 @@ mybatis:
 #    type: com.alibaba.druid.pool.DruidDataSource
 logging:
   level:
-    com.gzmu.mapper: trace
+    com.gzmu.mapper: fatal
