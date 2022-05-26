@@ -14,5 +14,9 @@
     <select id="getUser" resultType="String">
         select username from test where id = 1
     </select>
+
+<!--    <select id="getUser" resultMap="BaseResultMap">-->
+<!--        select * from test;-->
+<!--    </select>-->
     
 </mapper>

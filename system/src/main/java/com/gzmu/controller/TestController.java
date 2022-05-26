@@ -27,4 +27,9 @@ public class TestController {
     public String getUser(){
         return testService.getUser();
     }
+
+    @RequestMapping("/getname")
+    public String getName(){
+        return null;
+    }
 }

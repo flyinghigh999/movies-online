@@ -25,3 +25,6 @@ spring:
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
 #    type: com.alibaba.druid.pool.DruidDataSource
+logging:
+  level:
+    com.gzmu.mapper: trace
