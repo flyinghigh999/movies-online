@@ -1,5 +1,6 @@
 package com.gzmu;
 
+
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,13 +15,13 @@ import org.springframework.core.env.ConfigurableEnvironment;
 @SpringBootApplication
 @EnableEurekaClient
 @MapperScan("com.gzmu.server.mapper")
-public class SystemApp {
-    private static final Logger LOG = LoggerFactory.getLogger(SystemApp.class);
+public class BusinessApp {
+    private static final Logger LOG = LoggerFactory.getLogger(BusinessApp.class);
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(SystemApp.class);
+        SpringApplication app = new SpringApplication(BusinessApp.class);
         ConfigurableEnvironment env = app.run(args).getEnvironment();
         LOG.info("启动成功！！");
-        LOG.info("System地址：\thttp://127.0.0.1:{}",env.getProperty("server.port"));
+        LOG.info("Business地址：\thttp://127.0.0.1:{}",env.getProperty("server.port"));
     }
 }
