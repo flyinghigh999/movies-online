@@ -32,13 +32,13 @@ spring:
         ###路由id
         - id: system
           ####转发http://www.mayikt.com/
-          uri: http://127.0.0.1:8002/
+          uri: lb:srever_system
           ###匹配规则
           predicates:
             - Path=/system/**
         - id: business-admin
           ####转发http://www.mayikt.com/
-          uri: http://127.0.0.1:8003/
+          uri: lb:server_business
           ###匹配规则
           predicates:
-            - Path=/business/admin/**
+            - Path=/business/**
