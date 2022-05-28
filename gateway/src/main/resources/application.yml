@@ -36,9 +36,9 @@ spring:
           ###匹配规则
           predicates:
             - Path=/system/**
-        - id: business
+        - id: business-admin
           ####转发http://www.mayikt.com/
           uri: http://127.0.0.1:8003/
           ###匹配规则
           predicates:
-            - Path=/business/**
+            - Path=/admin/**
