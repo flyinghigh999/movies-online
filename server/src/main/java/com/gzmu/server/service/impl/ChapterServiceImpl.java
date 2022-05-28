@@ -55,7 +55,7 @@ public class ChapterServiceImpl implements ChapterService {
      * @param chapterEntityList
      * @return
      */
-    public List<ChapterView> convertChapterViewListfromEntity(List<ChapterEntity> chapterEntityList){
+    private List<ChapterView> convertChapterViewListfromEntity(List<ChapterEntity> chapterEntityList){
         if(chapterEntityList.isEmpty()){
             return null;
         }

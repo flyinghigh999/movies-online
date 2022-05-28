@@ -17,7 +17,7 @@ import java.util.List;
  * 后台访问controller层
  */
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("business/admin")
 public class BusinessController {
 
     @Value("${server.port}")

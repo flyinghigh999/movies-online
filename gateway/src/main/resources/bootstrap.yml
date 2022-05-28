@@ -41,4 +41,4 @@ spring:
           uri: http://127.0.0.1:8003/
           ###匹配规则
           predicates:
-            - Path=/admin/**
+            - Path=/business/admin/**
