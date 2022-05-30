@@ -15,7 +15,7 @@ eureka:
     fetch-registry: true
 spring:
   application:
-    name: server_gateway
+    name: server-gateway
 #路由转发
   cloud:
     gateway:
@@ -23,7 +23,7 @@ spring:
         locator:
           ####开启以服务id去注册中心上获取转发地址
           enabled: true
-#      routes:
+      #      routes:
 #        - id: system
 #          uri: http://127.0.0.1:8002
 #          predicates:
@@ -32,13 +32,10 @@ spring:
         ###路由id
         - id: system
           ####转发http://www.mayikt.com/
-          uri: lb:server_system
-          ###匹配规则
+          uri: lb://server-system
           predicates:
             - Path=/system/**
         - id: business-admin
-          ####转发http://www.mayikt.com/
-          uri: lb:server_business
-          ###匹配规则
+          uri: lb://server-business
           predicates:
             - Path=/business/**

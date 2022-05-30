@@ -15,5 +15,5 @@ eureka:
     fetch-registry: true
 spring:
   application:
-    name: server_business
+    name: server-business
 
