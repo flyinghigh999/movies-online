@@ -1,11 +1,9 @@
 package com.gzmu.controller.admin;
 
 
-import com.gzmu.server.entity.ChapterEntity;
-import com.gzmu.server.entity.TestEntity;
 import com.gzmu.server.service.ChapterService;
-import com.gzmu.server.service.TestService;
 import com.gzmu.server.view.ChapterView;
+import com.gzmu.server.view.PageModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,8 +30,8 @@ public class BusinessController {
     }
 
     @RequestMapping("/list")
-    public List<ChapterView> getUser(){
-        return businessService.list();
+    public PageModel<ChapterView> getUser(PageModel pageModel){
+        return businessService.list(pageModel);
     }
 
 }

@@ -1,10 +1,14 @@
 package com.gzmu.server.service.impl;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.gzmu.server.entity.ChapterEntity;
 import com.gzmu.server.entity.ChapterEntityExample;
 import com.gzmu.server.mapper.ChapterMapper;
 import com.gzmu.server.service.ChapterService;
 import com.gzmu.server.view.ChapterView;
+import com.gzmu.server.view.PageModel;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,17 +23,22 @@ public class ChapterServiceImpl implements ChapterService {
     private ChapterMapper chapterMapper;
 
     @Override
-    public List<ChapterView> list() {
-        ChapterEntityExample chapterExample = new ChapterEntityExample();
+    public PageModel<ChapterView> list(PageModel pageModel) {
+        PageHelper.startPage(pageModel.getPageNum(),pageModel.getPageSize());
 //        chapterExample.createCriteria().andIdEqualTo("1");
 //        chapterExample.setOrderByClause("id asc");
         //select id, course_id, `name` from chapter WHERE ( id = ? ) order by id asc
 
         //执行业务，查询chapter表里id等于1的数据，并且升序排列
+        ChapterEntityExample chapterExample = new ChapterEntityExample();
         List<ChapterEntity> chapterEntity = chapterMapper.selectByExample(chapterExample);
-        List<ChapterView> chapterViews = convertChapterViewListfromEntity(chapterEntity);
 
-        return chapterViews;
+        //数据处理
+        PageInfo<ChapterEntity> pageInfo = new PageInfo<>(chapterEntity);
+        pageModel.setTotal(pageInfo.getTotal());
+        List<ChapterView> chapterViews = convertChapterViewListfromEntity(chapterEntity);
+        pageModel.setList(chapterViews);
+        return pageModel;
 
     }
 
